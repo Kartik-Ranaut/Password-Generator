@@ -9,9 +9,11 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 .box{
+    border-radius: 15px;
     background-color: red;
-    width:100px;
-    height: 100px;
+    width:350px;
+    height: 350px;
 }

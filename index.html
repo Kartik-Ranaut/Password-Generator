@@ -13,10 +13,33 @@
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
             <button>
                 <span data-copyMsg></span>
-                
+                <img src="assets/copy.svg" alt="copy" height="23" width="23">
             </button>
         </div>
-        <div class="box"></div>
+        <div class="box">
+            <div class="passLen">
+                <p>Password length</p>
+                <p data-length>8</p>
+            </div>
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Include Symbols</label>
+            </div>
+
+        </div>
     </div>
 
 </body>

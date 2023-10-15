@@ -20,8 +20,9 @@
             <div class="passLen">
                 <p>Password length</p>
                 <p data-length>8</p>
-            </div>
+            </div><br>
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <br>
             <div>
                 <input type="checkbox" id="uppercase">
                 <label for="uppercase">Include Uppercase Letters</label>
@@ -37,8 +38,12 @@
             <div>
                 <input type="checkbox" id="symbols">
                 <label for="symbols">Include Symbols</label>
-            </div>
-
+            </div><br>
+            <div class="strength-cont">
+                <p>Strength</p>
+                <div class="circle" dataindecator></div>
+            </div><br>
+            <button class="genButton">Generate Password</button>
         </div>
     </div>
 

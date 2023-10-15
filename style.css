@@ -24,6 +24,23 @@
     padding: 50px;
     
 }
+.output{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.display{
+    text-decoration: none;
+    border: 0;
+    padding: 5px;
+    margin: 0;
+    background: transparent;
+    font: 13px sans-serif;
+    cursor:default;
+    
+}
+
 .header{
     font-size: 23px;
     color: white;

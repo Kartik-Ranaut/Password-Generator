@@ -10,4 +10,7 @@ const symbolsCheck=document.querySelector("#symbols");
 const numbersCheck=document.querySelector("#numbers");
 const indicator = document.querySelector("[data-indicator]");
 const genButton = document.querySelector(".genButton");
-const allCheckBox=document.querySelector("input[type=checkbox]");
+const allCheckBox=document.querySelectorAll("input[type=checkbox]");
+// let password="";
+// let passwordLength=10;
+// let checkCount=1;

@@ -14,11 +14,32 @@ const allCheckBox=document.querySelectorAll("input[type=checkbox]");
 let password="";
 let passwordLength=10;
 let checkCount=1;
-
+let symbols='`!@#$%^&*(){}|":?><<,./;][';
 handleSlider();
 //function to handle slider
 function handleSlider(){
     inputSlider.value=passwordLength;
     Datalength.innerText=passwordLength;
 
+}
+
+function setIndicator(color){
+    indicator.style.backgroundColor=color;
+}
+function getRndInteger(max,min){
+    return Math.floor(Math.random()*(max-min))+min;
+}
+
+function getRndNumber(){
+    return getRndInteger(0,9);
+}
+
+function getRndLowercase(){
+    return String.fromCharCode(getRndInteger(97,123));
+}
+function getRndUppercase(){
+    return String.fromCharCode(getRndInteger(67,91));
+}
+function getRndSymbol(){
+    return symbols.charAt(getRndInteger(0,symbols.length));
 }

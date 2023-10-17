@@ -1,5 +1,5 @@
 const inputSlider = document.querySelector("[data-lengthSlider]");
-const length=document.querySelector("[data-length]");
+const Datalength=document.querySelector("[data-length]");
 
 const passwordDisplay=document.querySelector("[data-passwordDisplay]");
 const copyBtn=document.querySelector("[data-copy]");
@@ -15,3 +15,10 @@ let password="";
 let passwordLength=10;
 let checkCount=1;
 
+handleSlider();
+//function to handle slider
+function handleSlider(){
+    inputSlider.value=passwordLength;
+    Datalength.innerText=passwordLength;
+
+}

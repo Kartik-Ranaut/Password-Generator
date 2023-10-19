@@ -94,3 +94,21 @@ copyBtn.addEventListener('click',()=>{
   }
 }
 );
+function handlecheckbox(){
+  checkCount=0;
+  allCheckBox.forEach((checkbox)=>{
+    if(checkbox.checked){
+      checkCount++;
+    }
+  });
+  if(passwordLength < checkCount ) {
+    passwordLength = checkCount;
+    handleSlider();
+}
+}
+allCheckBox.forEach((checkbox)=>{
+  checkbox.addEventListener('change',handlecheckbox)
+});
+genButton.addEventListener("click",()=>{
+  
+});

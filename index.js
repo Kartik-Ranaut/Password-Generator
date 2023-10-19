@@ -83,3 +83,7 @@ async function copyContent() {
   },2000);
 
 }
+inputSlider.addEventListener('input', (e) => {
+  passwordLength = e.target.value;
+  handleSlider();
+})

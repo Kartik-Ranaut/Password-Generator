@@ -66,22 +66,6 @@ function calcStrength() {
     }
 }
 
-try {
-  await navigator.clipboard.writeText(passwordDisplay.value);
-  copyMsg.innerText = "copied";
-}
-catch(e) {
-  copyMsg.innerText = "Failed";
-}
-//to make copy wala span visible
-copyMsg.classList.add("active");
-
-setTimeout( () => {
-  copyMsg.classList.remove("active");
-},2000);
-
-}
-
 copyContent();
 async function copyContent() {
   try {
@@ -92,10 +76,10 @@ async function copyContent() {
       copyMsg.innerText = "Failed";
   }
   //to make copy wala span visible
-  // copyMsg.classList.add("active");
+  copyMsg.classList.add("active");
 
-  // setTimeout( () => {
-  //     copyMsg.classList.remove("active");
-  // },2000);
+  setTimeout( () => {
+      copyMsg.classList.remove("active");
+  },2000);
 
 }

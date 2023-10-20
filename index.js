@@ -110,5 +110,12 @@ allCheckBox.forEach((checkbox)=>{
   checkbox.addEventListener('change',handlecheckbox)
 });
 genButton.addEventListener("click",()=>{
-  
+  if(checkCount==0) return;
+
+  if(passwordLength<checkCount){
+    passwordLength=checkCount;
+    handleSlider();
+  }
+
+  password="";
 });

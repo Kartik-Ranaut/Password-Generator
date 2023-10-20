@@ -118,4 +118,17 @@ genButton.addEventListener("click",()=>{
   }
 
   password="";
+
+  if(uppercaseCheck.checked){
+    password+=getRndUppercase();
+  }
+  if(lowercaseCheck.checked){
+    password+=getRndLowercase();
+  }
+  if(numbersCheck.checked){
+    password+=getRndNumber();
+  }
+  if(symbolsCheck.checked){
+    password+=getRndSymbol();
+  }
 });

@@ -64,7 +64,7 @@
 .datacopymsg{
     position: relative;
     height: fit-content;
-    width: fit-content;
+    width: 40px;
     padding:5px;
     border: 0;
     left:30px;
@@ -129,4 +129,11 @@
     border-bottom: 0px solid black;
     border-right: 0px solid black;
     transform: translateY(3px) translateX(3px);
+  }
+  
+  
+  .data-copy{
+    
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
   }

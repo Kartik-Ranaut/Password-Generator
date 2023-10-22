@@ -83,7 +83,7 @@ async function copyContent() {
       copyMsg.innerHTML="";
       copyMsg.style.visibility="hidden";
       // copyMsg.classList.remove("active");
-  },2000);
+  },600);
 
 }
 inputSlider.addEventListener('input', (e) => {

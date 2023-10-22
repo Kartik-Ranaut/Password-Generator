@@ -13,7 +13,7 @@ const genButton = document.querySelector(".genButton");
 const allCheckBox=document.querySelectorAll("input[type=checkbox]");
 let password="";
 let passwordLength=10;
-let checkCount=1;
+let checkCount=0;
 let symbols='`!@#$%^&*(){}|":?><<,./;][';
 handleSlider();
 //function to handle slider
@@ -71,6 +71,7 @@ async function copyContent() {
   try {
       await navigator.clipboard.writeText(passwordDisplay.value);
       copyMsg.innerText = "copied";
+      copyMsg.style.visibility="visible";
   }
   catch(e) {
       copyMsg.innerText = "Failed";
@@ -79,7 +80,8 @@ async function copyContent() {
   copyMsg.classList.add("active");
 
   setTimeout( () => {
-      copyMsg.innerHTML=""
+      copyMsg.innerHTML="";
+      copyMsg.style.visibility="hidden";
       // copyMsg.classList.remove("active");
   },2000);
 
@@ -110,7 +112,9 @@ function handlecheckbox(){
   allCheckBox.forEach((checkbox)=>{
     checkbox.addEventListener('change',handlecheckbox)
   });
-  genButton.addEventListener("click",()=>{
+genButton.addEventListener("click",()=>{
+    
+
     if(checkCount==0) return;
 
     if(passwordLength<checkCount){

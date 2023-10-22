@@ -11,15 +11,16 @@
         <div class="header">PASSWORD GENERATOR</div>
         <div class="output">
             <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            <div class="datacopymsg" data-copyMsg></div>
             <button data-copy>
-                <span data-copyMsg></span>
+
                 <img src="assets/copy.svg" alt="copy" height="23" width="23">
             </button>
         </div>
         <div class="box">
             <div class="passLen">
-                <p>Password length</p>
-                <p data-length>8</p>
+                <p class="passlentext">Password length</p>
+                <p class="passlentext" data-length>8</p>
             </div><br>
             <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
             <br>

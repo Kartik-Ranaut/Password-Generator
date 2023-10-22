@@ -104,31 +104,47 @@ function handlecheckbox(){
   if(passwordLength < checkCount ) {
     passwordLength = checkCount;
     handleSlider();
-}
-}
-allCheckBox.forEach((checkbox)=>{
-  checkbox.addEventListener('change',handlecheckbox)
-});
-genButton.addEventListener("click",()=>{
-  if(checkCount==0) return;
-
-  if(passwordLength<checkCount){
-    passwordLength=checkCount;
-    handleSlider();
   }
+  }
+  allCheckBox.forEach((checkbox)=>{
+    checkbox.addEventListener('change',handlecheckbox)
+  });
+  genButton.addEventListener("click",()=>{
+    if(checkCount==0) return;
+
+    if(passwordLength<checkCount){
+      passwordLength=checkCount;
+      handleSlider();
+    }
 
   password="";
 
+  let funarr=[];
   if(uppercaseCheck.checked){
-    password+=getRndUppercase();
-  }
+      funarr.push(getRndUppercase);
+    }
   if(lowercaseCheck.checked){
-    password+=getRndLowercase();
-  }
+    funarr.push(getRndLowercase);
+    }
   if(numbersCheck.checked){
-    password+=getRndNumber();
-  }
+    funarr.push(getRndNumber);
+    }
   if(symbolsCheck.checked){
-    password+=getRndSymbol();
+    funarr.push(getRndSymbol);
+    }
+  //cumpulsury addition
+  for(let i=0;i<funarr.length;i++){
+    password+=funarr[i]();
   }
+  //remaining addition
+  for(let i=0;i<passwordLength-funarr.length;i++){
+    password+=funarr[getRndInteger(0,funarr.length)]();
+  }
+
+  // shuffle
+  password=shuffle(password);
+
+  //display
+  passwordDisplay.value=password;
+
 });

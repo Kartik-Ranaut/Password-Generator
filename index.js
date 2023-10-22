@@ -23,8 +23,9 @@ handleSlider();
 function handleSlider(){
     inputSlider.value=passwordLength;
     Datalength.innerText=passwordLength;
-
 }
+
+
 add.addEventListener("click",()=>{
   passwordLength++;
   if(passwordLength>20){
@@ -83,7 +84,7 @@ function calcStrength() {
     ) {
       setIndicator("#ff0");
     } else {
-      setIndicator("#f00");
+      setIndicator("#800");
     }
 }
 
@@ -174,5 +175,5 @@ genButton.addEventListener("click",()=>{
   passwordDisplay.value=password;
 
   //strength
-  calcStrength()
+  calcStrength();
 });

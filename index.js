@@ -66,7 +66,7 @@ function calcStrength() {
     }
 }
 
-copyContent();
+
 async function copyContent() {
   try {
       await navigator.clipboard.writeText(passwordDisplay.value);
@@ -147,4 +147,6 @@ function handlecheckbox(){
   //display
   passwordDisplay.value=password;
 
+  //strength
+  calcStrength()
 });

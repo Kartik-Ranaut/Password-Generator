@@ -146,3 +146,7 @@
     background-image: linear-gradient(orange,orange);
     color: black;
   }
+  .sliding{
+    display: flex;
+    justify-content: space-between;
+  }

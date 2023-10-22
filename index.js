@@ -142,7 +142,7 @@ function handlecheckbox(){
   }
 
   // shuffle
-  password=shuffle(password);
+  // password=shuffle(password);
 
   //display
   passwordDisplay.value=password;

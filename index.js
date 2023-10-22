@@ -11,6 +11,9 @@ const numbersCheck=document.querySelector("#numbers");
 const indicator = document.querySelector("[data-indicator]");
 const genButton = document.querySelector(".genButton");
 const allCheckBox=document.querySelectorAll("input[type=checkbox]");
+const add = document.querySelector(".add");
+const sub = document.querySelector(".sub");
+
 let password="";
 let passwordLength=10;
 let checkCount=0;
@@ -22,6 +25,24 @@ function handleSlider(){
     Datalength.innerText=passwordLength;
 
 }
+add.addEventListener("click",()=>{
+  passwordLength++;
+  if(passwordLength>20){
+    passwordLength--;
+    alert("cannot exceed 20");
+    return
+  }
+  handleSlider();
+});
+sub.addEventListener("click",()=>{
+  passwordLength--;
+  if(passwordLength<0){
+    passwordLength++;
+    alert("cannot be negative");
+    return
+  }
+  handleSlider();
+});
 
 function setIndicator(color){
     indicator.style.backgroundColor=color;

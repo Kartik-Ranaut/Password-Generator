@@ -137,8 +137,10 @@ function handlecheckbox(){
 genButton.addEventListener("click",()=>{
     
 
-    if(checkCount==0) return;
-
+    if(checkCount==0) {
+      alert("mark at least on checkbox");
+      return;
+    }
     if(passwordLength<checkCount){
       passwordLength=checkCount;
       handleSlider();

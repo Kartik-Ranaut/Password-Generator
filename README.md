@@ -6,3 +6,4 @@
 ⭐️After that password🔒 is generated user can copy it by clicking the copy button.<br>
 ⭐️It also contain an indicator to show the strength of password, green indicates strong password, yellow indicates medium password and red indicates weak password.
 </p>
+<video src="assets/Password generator"></video>
